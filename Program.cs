@@ -13,6 +13,9 @@ namespace DiscordMikrotikBot
     {
         static void Main(string[] args)
         {
+            ////////////////////////////////////////////////////////////////////////
+            ///        https://github.com/Crash0v3r1de/DiscordMikrotikBot        ///
+            ////////////////////////////////////////////////////////////////////////
             //if(args != null & args[0] != "debug")
             Intro();
             new Setup().Exec();
