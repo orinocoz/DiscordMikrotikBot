@@ -3,6 +3,16 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Copyright>Copyright 2021(c) 991 Technologies LLC. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://991tech.org/</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="JSON\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
 
 </Project>
