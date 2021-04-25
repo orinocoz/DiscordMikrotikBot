@@ -10,5 +10,6 @@ namespace DiscordMikrotikBot.Lists
         public string Version { get; set; }
         public BranchChannel Branch { get; set; }
         public string Changelog { get; set; }
+        public string URL { get; set; }
     }
 }

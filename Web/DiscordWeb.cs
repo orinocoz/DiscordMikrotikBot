@@ -12,7 +12,7 @@ namespace DiscordMikrotikBot.Web
 {
     public class DiscordWeb
     {
-        public bool SendWebhook(string raw,string webhook)
+        public bool SendWebhook(string raw,string webhook,string url)
         {
             // Instead of just sending string we will have the function requiring a ItemJson so we can send full details in correct format for POST webhook
             // https://gist.github.com/Birdie0/78ee79402a4301b1faf412ab5f1cdcf9

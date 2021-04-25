@@ -1,6 +1,5 @@
 ﻿using System;
 using DiscordMikrotikBot.Extensions;
-using DiscordMikrotikBot.Lists;
 using DiscordMikrotikBot.Logic;
 using DiscordMikrotikBot.Tools;
 using DiscordMikrotikBot.Trackers;
@@ -26,7 +25,7 @@ namespace DiscordMikrotikBot
                 Rss feed = XMLMaster.ScrapeMikrotik(WebCore.ScrapeRouterOS());
                 Console.WriteLine("Changelog parsed.....checking if new version needs to be announced");
                 new VersionLogic().CheckChangelog(feed);
-                Console.WriteLine("Checking of new versions complete.....Going to sleep in 15 seconds if no input received");
+                Console.WriteLine("Checking of new versions complete..... Going to sleep in 15 seconds if no input received");
                 var tmp = Reader.ReadLine(15*1000);
                 // Handle input as a text menu at some point - null means no input
                 ConsoleColor.Reset();
@@ -52,5 +51,6 @@ namespace DiscordMikrotikBot
             Console.WriteLine("=================================================================================");
             ConsoleColor.Reset();
         }
+
     }
 }

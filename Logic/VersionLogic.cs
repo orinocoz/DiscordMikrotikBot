@@ -217,6 +217,7 @@ namespace DiscordMikrotikBot.Logic
                     tmpItem.Branch = branch;
                     tmpItem.Version = ParseVersion(i.Description); // If null or error log in Logger class
                     tmpItem.Changelog = i.Description;
+                    tmpItem.URL = i.Link2;
                     tmp.Add(tmpItem);
                 }
                 else
@@ -227,7 +228,12 @@ namespace DiscordMikrotikBot.Logic
 
             return tmp; // If null or error log in Logger class
         }
-
+        /// We can add switches for handling of different options down the road from this
+        private string FormatWebhook(string branch, string version, string url)
+        {
+            return $"{branch} | {version} | [New version published - click here to read about it.]({url})";
+        }
+        /// This will eventually be the logic for changing settings - still needs to be coded and implemented
         private void ChangeSettingsPrompt()
         {
 
@@ -241,7 +247,7 @@ namespace DiscordMikrotikBot.Logic
                 if (NotificationNeeded(i.Version,i.Branch))
                 {
                     // Send notification and save the running config data
-                    new DiscordWeb().SendWebhook($"{i.Version} | {i.Branch} | New version published!", Decrypt(i.Branch));
+                    new DiscordWeb().SendWebhook(FormatWebhook(i.Branch.ToString(),i.Version,i.URL), Decrypt(i.Branch),i.URL);
                     IO.SaveConfig(ParseConfig());
                 }
             }
