@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Copyright>Copyright 2021(c) 991 Technologies LLC. All rights reserved.</Copyright>
     <PackageProjectUrl>https://991tech.org/</PackageProjectUrl>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
