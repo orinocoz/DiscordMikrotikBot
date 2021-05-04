@@ -6,5 +6,6 @@ namespace DiscordMikrotikBot.Tools
 {
     public static class Logger
     {
+        // lol
     }
 }
